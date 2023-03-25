@@ -1,0 +1,49 @@
+/* Specifity Rules */
+/*
+1. inline styles have highest specifity over selectors
+2. Selectors in order of highest specificity:
+  a. ID
+  b. Class
+  c. Type
+3. Declarations with a single selector kind:
+   <div class="main"><div class="list subsection"></div></div>
+   .subsection {...} .main .list {...}
+   The descendant combination beats the single selector because all three
+   selectors are of the same specificity, but the combination is using more
+   selectors.
+*/
+* { /* This is the universal-selector. */ 
+  font-family: Rockwell;
+}
+
+body {
+  text-align: center; /* Align text horizontally within element. */
+}
+
+/*
+This is generic image styling where the original proportions are kept.
+It's good practice to set the height and width in CSS so that space is
+reserved for the image to prevent a slow-loading image to seemingly shift
+content around it all of a sudden.
+*/
+.some-image {
+  height: auto;
+  width: 200px;
+}
+
+a { /* This is a type-selector. */
+  text-decoration: none;
+}
+
+.foo.bar { /* .foo#bar */
+  /* You can chain selectors this way. */
+  /* You cannot chain more than one type-selector. */
+  /* There must be no spaces between selectors. */
+}
+
+.foo .bar {
+  /* This is a descendant combinator. */
+  /* The ancestor selector is .foo and the descendant is .bar. */
+  /* There can be any number of levels between .foo and .bar, as long as .bar is somewhere within .foo. */
+  /* The selectors must be separated by space. */
+}
