@@ -22,9 +22,15 @@ It's good practice to set the height and width in CSS so that space is
 reserved for the image to prevent a slow-loading image to seemingly shift
 content around it all of a sudden.
 */
-.some-image {
+.some-image { /* This class doesn't exist in index.html. */
   height: auto;
   width: 200px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a { /* This is a type-selector. */
@@ -49,6 +55,7 @@ a { /* This is a type-selector. */
 #hero-box {
   background: #1F2937;
   padding: 24px 240px 72px 240px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -111,4 +118,54 @@ a { /* This is a type-selector. */
   border-radius: 8px;
   color: #E5E7EB;
   font-size: 18px;
+}
+
+#main-content-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+#random-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#random-info-item-box {
+  display: flex;
+  gap: 80px;
+}
+
+.random-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.random-info-item-img-box {
+  border: 5px solid #3882F6;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.random-info-item-text {
+  text-align: center;
+  width: 200px;
+  color: #807F7F;
+}
+
+#footer {
+  background-color: #1F2937;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#footer > p { /* The greater than symbol here means we're selecting all <p> types under #footer. */
+  color: #E5E7EB;
+  align-self: center;
 }
