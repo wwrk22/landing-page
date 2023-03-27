@@ -16,10 +16,6 @@
   font-family: Rockwell;
 }
 
-body {
-  text-align: center; /* Align text horizontally within element. */
-}
-
 /*
 This is generic image styling where the original proportions are kept.
 It's good practice to set the height and width in CSS so that space is
@@ -52,7 +48,10 @@ a { /* This is a type-selector. */
 
 #hero-box {
   background: #1F2937;
-  padding: 24px 168px;
+  padding: 24px 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 #header-box {
@@ -68,7 +67,27 @@ a { /* This is a type-selector. */
 
 #header-link-box {
   display: flex;
-  gap: 24px;
+  gap: 30px;
+}
+
+#hero-content-box {
+  display: flex;
+  gap: 10%; /* 20% of the width of #hero-content-box */
+  padding: 0px 120px;
+}
+
+#hero-signup-box {
+}
+
+#hero-main-text-heading {
+  color: #F9FAF8;
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+#hero-main-text-body {
+  color: #E5E7EB;
+  font-size: 18px;
 }
 
 #hugo-img {
