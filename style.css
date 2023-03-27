@@ -70,3 +70,8 @@ a { /* This is a type-selector. */
   display: flex;
   gap: 24px;
 }
+
+#hugo-img {
+  width: 260px;
+  height: auto;
+}
