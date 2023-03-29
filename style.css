@@ -115,7 +115,7 @@ a { /* This is a type-selector. */
   border-radius: 20%;
 }
 
-#signup-button {
+#signup-button-a {
   margin: 0;
   background-color: #3882F6;
   border: none;
@@ -158,6 +158,12 @@ a { /* This is a type-selector. */
   height: 200px;
 }
 
+.random-info-item-img {
+  width: 196px;
+  height: 196px;
+  border-radius: 20px
+}
+
 .random-info-item-text {
   text-align: center;
   width: 200px;
@@ -188,6 +194,39 @@ a { /* This is a type-selector. */
   color: #1F2937;
   font-weight: bold;
   align-self: flex-end;
+}
+
+#signup-box {
+  background-color: #3882F6;
+  border-radius: 16px;
+  padding: 40px 100px;
+  display: flex;
+  gap: 40px;
+}
+
+#signup-content {
+  width: 600px;
+}
+
+#signup-heading {
+  font-size: 32px;
+  color: white;
+}
+
+#signup-body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+
+#signup-button-b { 
+  margin: 0;
+  background-color: #3882F6;
+  border: 2px solid white;
+  padding: 12px 36px 8px 36px;
+  border-radius: 16px;
+  color: white;
+  font-size: 24px;
 }
 
 #footer {
